@@ -1,152 +1,291 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-*,
-body,
-h1 {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-:root {
-  --brandcolor: #accc04;
-  --RioGrande: #accc04;
-  --MalaChite: #04c43c;
-  --Nevada: #5c7474;
-  --HotPink: #ef7c8e;
-  --LuckyPoint: #142464;
-  --BrightGray: #383c54;
-  --Eucalyptus: #248c64;
-  --Gold: #f8d210;
-}
-body{
-  display:grid;
-  grid-template-columns:1fr;
-  justify-items:center;
-  background-color:var(--BrightGray);
-  font-family:'Poppins', sans-serif;
-}
-header {
-  width:80vw;
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color:white;
-}
-header, main{
-  width:80vw;
-}
-
-main {
-  padding: 0px;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 30px;
-  height: auto;
-  background:white;
-  position:relative;
-}
-.leftsec,
-.rightsec {
-  width: 100%;
-  height: auto;
-
-}
-.boxhdr {
-  padding: 10px;
-  background: #bad430;
-}
-.createdBy {
-}
-.img1 {
-  width: 60%;
-  height: 70px;
-}
-.img2 {
-  width: 10vw;
-  height: 120px;
-}
-.img3 {
-  width: 80%;
-  height: 140px;
-}
-.img1,
-.img2,
-.img3 {
-  padding: 0px;
-  margin: 0px 0;
-  background-color: #f0f0f0;
-}
-.boxContent {
-  padding: 20px 20px 0px 20px;
-  font-size: 0.7rem;
-}
-.boxContent p {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  width: 80%;
-  font-family: sans-serif;
-  font-size: 0.9rem;
-  position: relative;
-}
-.boxContent span {
-  margin-top: 1px;
-}
-.boxColorContent {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
-}
-.brandspec {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 30px;
-  margin: 30px 0;
-  width: 100%;
-  align-items: end;
-  justify-items: start;
-  padding-bottom: 10px;
-}
-.brandcolor {
-  background: var(--brandcolor);
-}
-.pallets {
-  width: 100px;
-  height: 80px;
-}
-.secnd1 {
-  background: rgb(239 124 142);
-}
-.secnd2 {
-  background: hsl(228deg 67% 24%);
-}
-.secnd3 {
-  background: #5c7474;
-}
-.secnd4 {
-  background: #f8d210;
-}
-
-@media only screen and (max-width: 768px) {
-    body{
-    background:white;
+* {
+    box-sizing: border-box;
   }
-  main {
-    grid-template-columns: 1fr;
-    width:90vw;
+  :root {
+    --bg-color: hsl(0deg 0% 100%);
+  --typewriterSpeed: 6s;
+  --typewriterCharacters: 24;
+  }
+  body {
+    background-color: #383C54;
+    font-family: Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+
+  }
+  h1{
+    position: relative;
+    color:#383C54;
+    font-family:monospace;
+    font-size: clamp(0.9rem, 0.2vw + 1rem, 2rem);
+    position: relative;
+    font-family: "Source Code Pro", monospace;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+  /*h1::after{
+    content: "Proposed Timeline";
+    font-size:0.6rem;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    color:#EF7C8E
+  }*/
+  /*Thanks Kevin Powell*/
+  h1::before {
+  background: var(--bg-color);
+  -webkit-animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+          animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+}
+h1::after {
+  width: 0.125em;
+  background: black;
+  -webkit-animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 750ms steps(var(--typewriterCharacters)) infinite;
+          animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+@-webkit-keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+@-webkit-keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  h2{
+    font-size:0.95rem;
+    margin-top:0;
+  }
+  nav{
+    text-align:right;
+
+  }
+  nav a{
+    text-decoration:none;
+    color:#383C54;
+        padding-right:30px;
   }
   header{
-    width:100vw
-  }
-  .boxColorContent{
+    background-color:white;
+    padding: 10px;
+    position:relative;
+    display:grid;
     grid-template-columns:1fr 1fr;
+    width:100vw;
+    align-items:center;
   }
-  .brandspec{
-    grid-template-columns:1fr;
-    align-content:center;
+  header::after{
+        content: "Proposed Timeline";
+    font-size:0.6rem;
+    font-weight:900;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color:#EF7C8E;
+      opacity: 0;
+  transform: translateY(1rem);
+  -webkit-animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+          animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
   }
-  .boxContent{
-    width: 100vw;
+  details >summary, details  p, details ul li{
+    font-size:0.7rem;
   }
-  .brandspec img{
-    width:400px;
+ details summary{
+   font-weight:900;
+ }
+ .pended{
+   color:red;
+ }
+ .complete{
+   color:green
+ }
+ .indecision{
+   color:#c3c3c3
+ }
+
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
   }
-}
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background-color: #accc04;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 0 40px 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-image: url(/img/sqrLogo.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #142464;
+    top: 15px;
+    border:1px solid #accc04;
+    border-radius:3px;
+    z-index: 1;
+  }
+  .container:nth-child(1)::after{
+    border:1px solid #EF7C8E;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: -0.5%;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 14px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 18px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 10px 30px 10px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+
+    font-size:0.7rem;
+    color:#969696;
+    text-align: center
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
+    
+    /* Full-width containers */
+    .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 15px 20px 15px 0;
+    border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+    header{
+      grid-template-columns:1fr;
+    }
+      nav{
+    text-align:left;
+          opacity: 0;
+  transform: translateY(1rem);
+  -webkit-animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+          animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+
+  }
+
+  }
