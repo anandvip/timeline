@@ -100,6 +100,8 @@ h1::after {
         padding-right:30px;
   }
   header{
+    width:100vw;
+    overflow:hidden;
     background-color:white;
     padding: 10px;
     position:relative;
@@ -279,13 +281,5 @@ h1::after {
     header{
       grid-template-columns:1fr;
     }
-      nav{
-    text-align:left;
-          opacity: 0;
-  transform: translateY(1rem);
-  -webkit-animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
-          animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
-
-  }
 
   }
