@@ -172,7 +172,7 @@ h1::after {
     width: 25px;
     height: 25px;
     right: -17px;
-    background-image: url(/img/sqrLogo.png);
+    background-image: url(img/sqrLogo.png);
     background-size: 15px;
     background-repeat: no-repeat;
     background-position: center;
