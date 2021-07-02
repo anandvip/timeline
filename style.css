@@ -141,6 +141,9 @@ h1::after {
  .inProgress{
    color:#750bff
  }
+ .done{
+   text-decoration:line-through;
+ }
 
   /* The actual timeline (the vertical ruler) */
   .timeline {
