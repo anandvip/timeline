@@ -144,7 +144,7 @@ h1::after {
  .done{
    text-decoration:line-through;
  }
- .currentMn{
+ .content .currentMn{
    background-color:gold
  }
 
