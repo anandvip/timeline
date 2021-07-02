@@ -138,6 +138,9 @@ h1::after {
  .indecision{
    color:#c3c3c3
  }
+ .inProgress{
+   color:#750bff
+ }
 
   /* The actual timeline (the vertical ruler) */
   .timeline {
