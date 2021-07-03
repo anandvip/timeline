@@ -144,8 +144,8 @@ h1::after {
  .done{
    text-decoration:line-through;
  }
- .content .currentMn{
-   background-color:gold
+ .currentMn{
+   background-color:gold !important;
  }
 
   /* The actual timeline (the vertical ruler) */
