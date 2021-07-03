@@ -234,6 +234,10 @@ h1::after {
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   }
+  .container.right::before:has(.currentMn){
+    border: medium solid gold;
+    border-color: transparent gold transparent transparent;
+  }
   
   /* Fix the circle for containers on the right side */
   .right::after {
